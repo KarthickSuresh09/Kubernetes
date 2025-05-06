@@ -7,3 +7,26 @@ What is Kubernetes?
 
 Kubernetes is an open-source container orchestration platform designed to automate the deployment, 
 scaling, and management of containerized applications.      
+
+Developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF), Kubernetes simplifies the operational complexity of managing large-scale containerized workloads.
+
+why Kubernetes?
+
+\_ Manual Container Management
+\_ Resource Inefficiency
+\_ Service Discovery and Load Balancing
+\_ Scaling
+\_ Portability Across Environments  -----> EXAMPLE
+
+
+Seven Important components of Kubernetes
+1) Control Node
+* Controller Manager
+* Kube Api Server
+* Scheduler
+* etcd
+
+2) Worker Node
+* Kubelet 
+* Kube Proxy 
+* Container Runtime
