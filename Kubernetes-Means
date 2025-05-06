@@ -30,3 +30,19 @@ Seven Important components of Kubernetes
 * Kubelet 
 * Kube Proxy 
 * Container Runtime
+
+Kube API Server ======> API Gateway
+etcd: Databse =========> key:value
+Scheduler? ==============> Where to LAUNCH conatiner/POD
+    ⬇
+    ⬇
+Using ALOGORITHM
+
+
+Kublet means agent of the worker node
+
+Controller Manger
+DS
+CS        DS==CS      CS≠
+
+
