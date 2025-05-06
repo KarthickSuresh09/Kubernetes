@@ -1,1 +1,9 @@
-     
+system for automating the lifecycle of containers
+deployment, scaling, networking and management.
+
+K8S: K UBERNETE S
+
+What is Kubernetes?
+
+Kubernetes is an open-source container orchestration platform designed to automate the deployment, 
+scaling, and management of containerized applications.      
