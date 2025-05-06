@@ -1,0 +1,1858 @@
+What is your Job profile?
+WHat is your DevOps exp?
+Why you want to learn DevOps?
+======================================
+
+VCS : Version COntrol System
+------------------------------
+
+A Version Control System (VCS) is a tool that helps manage changes to source code or files over time, tracking revisions and enabling collaboration among developers. 
+
+Key Concepts in VCS
+
+Versioning : The ability to keep track of changes in files, code, or configurations over time.
+
+
+GitLab $ git --version
+git version 2.40.1
+GitLab $
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+All the git commands:
+
+git + verb 
+
+===========================================================
+Step#1: Install git ---------> Git bash  : Done
+
+Step#2: Create a project Dir ------------> : DOne
+
+Step#3: Confgure git
+
+git config --global user.name "kumar"
+git config --global user.email "kumar@gmail.com"
+git config --global core.editor "vi"
+git config --list
+
+Step # 4: Intialize the Git Repo
+
+$ git init
+
+GitLab $ git init
+
+Initialized empty Git repository in /root/myProjectA/.git/
+GitLab $
+
+(dot) .git --------> Hidden
+ls ------> this command not going to work
+
+ls -al -------> ALL files and folder 
+
+--------------------
+
+fileA.txt----> Dir
+
+$ git status
+
+GitLab $ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fileA.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+GitLab $
+
+
+$  git add fileA.txt
+
+
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fileA.txt
+
+GitLab $
+
+
+GitLab $ git commit -m "Added a New file"
+[master (root-commit) 3e55f07] Added a New file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fileA.txt
+GitLab $
+
+
+GitLab $ git status
+On branch master
+nothing to commit, working tree clean
+GitLab $
+
+
+
+
+
+
+commit cbd3bdec57589e38b932916bb30f33c0561617c8 (HEAD -> master)
+Author: kumar <kumar@gmail.com>
+Date:   Wed Oct 30 03:25:48 2024 +0000
+
+    Added 2nd file
+
+commit 3e55f07ab4c8e964c0c92135f38aa3be72fc77e1
+Author: kumar <kumar@gmail.com>
+Date:   Wed Oct 30 03:19:43 2024 +0000
+
+    Added a New file
+GitLab $
+
+
+-------------------------------
+
+Git Lab $ ls
+fileA.txt  fileB.txt
+Git Lab $
+
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+
+Git Lab $ vi fileC.txt
+Git Lab $ ls
+fileA.txt  fileB.txt  fileC.txt
+Git Lab $ cat fileC.txt
+This is my Py code
+Git Lab $
+
+
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fileC.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $ git add fileC.txt
+Git Lab $
+Git Lab $ git commit -m "Added the FILE C, with Py code"
+[master 3571434] Added the FILE C, with Py code  3571434  --------------->
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileC.txt
+Git Lab $
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+
+
+Git Lab $ vi fileC.txt
+Git Lab $ cat fileC.txt
+This is my Py code
+This is my 2nd line of code
+Git Lab $
+Git Lab $
+Git Lab $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   fileC.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Git Lab $
+
+Git Lab $ git add fileC.txt
+Git Lab $ git commit -m "Added new line of code ay fileC"
+[master 3960e0c] Added new line of code ay fileC
+ 1 file changed, 1 insertion(+)
+Git Lab $
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+------------------------------------------------------
+GIT IGNORE
+--------------
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.mov
+        2.mov
+
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        1.mov
+        2.mov
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+
+Git Lab $ vi .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ cat .gitignore
+1.mov
+2.mov
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+Git Lab $ git add .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ git commit -m "Added gitignore"
+[master 5a24d96] Added gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+-----------------------------
+Git Branching
+--------------------
+
+Git branching is a feature that allows you to create separate lines of development within a single repository. 
+
+Each branch represents an isolated version of the project, so you can work on new features or bug fixes without affecting the main codebase. 
+
+
+Git Lab $
+Git Lab $
+Git Lab $ git branch feature-branch
+Git Lab $
+Git Lab $
+Git Lab $ git branch
+  feature-branch
+* master
+Git Lab $
+
+
+Git Lab $ git checkout feature-branch
+Switched to branch 'feature-branch'
+Git Lab $ git branch
+* feature-branch
+  master
+Git Lab $
+
+testfile.txt
+Git Lab $ touch featureFile.txt
+Git Lab $ ls
+featureFile.txt  testfile.txt
+Git Lab $ git status
+On branch feature-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        featureFile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+
+
+Git Lab $ git branch
+* feature-branch
+  master
+Git Lab $
+Git Lab $
+Git Lab $ git checkout master
+Switched to branch 'master'
+Git Lab $
+
+
+
+Git Lab $ git checkout master
+Switched to branch 'master'
+Git Lab $
+Git Lab $
+Git Lab $ ls
+testfile.txt
+Git Lab $ git branch
+  feature-branch
+* master
+Git Lab $
+Git Lab $
+
+
+Git Lab $ git merge feature-branch
+Updating cd4b26f..b1452ca
+Fast-forward
+ featureFile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 featureFile.txt
+Git Lab $
+
+
+Summary:
+-----------
+
+\_ Create a branch: git branch branch-name
+\_ Switch to a branch: git checkout branch-name
+\_ UPGRADED/FIX at Feature Branch
+\_ List branches: git branch
+\_ SWITCH to MASTER/MAIN
+\_ Merge branches: git merge branch-name
+\_ ALL the FIX/UPGRADE is now available at MASTER
+
+
+=======================================
+
+GIT Branching
+---------------------
+
+git checkout -b feature-branch
+
+
+Git $ git merge feature-branch
+Merge made by the 'ort' strategy.
+ example_feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example_feature.txt
+
+
+
+
+Git $ git status
+On branch master
+nothing to commit, working tree clean
+
+Git $ git log
+commit 299a3ef41578e78ffe9ad001245566697e025b45 (HEAD -> master)
+Merge: 2d7ab35 8e84417
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:55:26 2024 +0000
+
+    Merging Feature with MASTER
+
+commit 2d7ab352f875c32803dc93b9c23e604080b5a427
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:52:20 2024 +0000
+
+    Added  master.txt at master branch
+
+commit 8e844178310e4ab5c157f1fe87e8b52bb8e9f77d (feature-branch)
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:49:41 2024 +0000
+
+    Added example_feature.txt at FEATURE branch
+
+commit 7e45af5a2a1b4cb70a719b1cb002eb5861b398d6
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:45:05 2024 +0000
+
+    Initial commit with example.txt
+
+
+
+------------
+
+Conflict example
+----------------------
+
+
+Git $ echo "Hello, World!" > example.txt
+Git $ git add example.txt
+Git $ git commit -m "Initial commit with example.txt"
+[master (root-commit) 9dc14bf] Initial commit with example.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+Git $
+
+
+Git $ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+Git $ git branch
+* feature-branch
+  master
+Git $ cat example.txt
+Hello, World!
+Git $ echo "This is a change in the feature branch." >> example.txt
+Git $ cat example.txt
+Hello, World!
+This is a change in the feature branch.
+Git $ git add example.txt
+Git $ git commit -m "Update example.txt in feature branch"
+[feature-branch a6c6525] Update example.txt in feature branch
+ 1 file changed, 1 insertion(+)
+Git $
+
+
+Git $ git checkout master
+Switched to branch 'master'
+Git $
+Git $ ls
+example.txt
+Git $ cat example.txt
+Hello, World!
+Git $ echo "This is a change in the main branch." >> example.txt
+Git $ cat example.txt
+Hello, World!
+This is a change in the main branch.
+Git $ git add example.txt
+Git $ git commit -m "Update example.txt in master branch"
+[master 5d25753] Update example.txt in master branch
+ 1 file changed, 1 insertion(+)
+Git $
+
+
+Git $ git merge feature-branch
+Auto-merging example.txt
+CONFLICT (content): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+---------------------
+
+Git Reset
+-------------
+
+Git’s reset command is powerful for undoing changes in your working directory and repository. 
+It can be used in different ways depending on the “mode” you choose: --soft, --mixed, or --hard.
+
+
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+Use Case: --soft is helpful if you want to edit the previous commit or re-commit it with a different message.
+
+
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+Use Case: --mixed is useful if you want to keep changes in your working directory but decide not to stage or commit them.
+
+
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+Use Case: --hard is best used when you want to discard all changes and reset your project to a previous commit.
+
+
+Summary:
+-----------
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+
+
+Git Restore
+-------------------
+Git's restore command is a helpful tool for undoing changes in your working directory or staging area. 
+
+====================================================
+
+how to set up a GitHub repository, connect it to Git Bash:
+---------------------------------------------------------------
+
+Create a Repository on GitHub
+
+Log in to GitHub: Go to GitHub and sign in to your account.
+
+
+Create a New Repository:
+
+Click on the + icon in the top right corner and select New repository.
+Enter a repository name and optionally a description.
+Choose whether you want the repository to be public or private.
+Click on Create repository.
+
+
+
+echo "# 06112024" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+
+git remote add origin https://github.com/discover-devops/06112024.git
+git push -u origin main
+
+origin = https://github.com/discover-devops/06112024.git
+-------------------------------------------------------
+
+
+git fetch
+------------
+The git fetch command downloads updates from a remote repository without merging them into your local branch. 
+
+$ git fetch origin
+
+$ git log origin/main --oneline
+
+$ git fetch origin feature-branch
+
+$ git branch -r
+==============================================
+
+
+git remote add origin <repository-url>
+
+git remote add myDevOpsProject <repository-url>
+
+git remote -v
+
+PUSH:
+git push origin main
+git push -u origin feature-branch
+
+
+PULL:
+git pull origin main
+
+
+git clone <repository-url>
+cd <repository-name>
+
+====================================================================
+
+
+Set Up Git and Connect Git Bash to GitHub
+-----------------------------------------------
+
+#1: Open Git Bash on your computer.
+
+#2: Configure Your Git Identity:
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+#3: Generate an SSH Key 
+
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+Press Enter to save the key to the default location and provide a passphrase if desired.
+
+home directory -----------> .ssh ------->
+
+1: Public Key  ------------> id_rsa.pub
+2: Private Key -----> id_rsa
+
+3.1: Copy Your SSH Key to GitHub:
+
+cat ~/.ssh/id_rsa.pub
+
+3.2: Add the SSH Key to GitHub:
+
+Go to your GitHub account, navigate to Settings > SSH and GPG keys, and click on New SSH key.
+
+# 4: Test the SSH Connection:
+ssh -T git@github.com
+
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+=======================================================================================
+
+CI/CD
+
+CI/CD stands for Continuous Integration and Continuous Delivery/Deployment. It’s a set of practices and tools that enable development teams to deliver code changes more frequently, reliably, and automatically. CI/CD is at the heart of DevOps and Agile methodologies, promoting faster and more efficient software development cycles.
+
+
+What is CI/CD?
+Continuous Integration (CI):
+
+CI is the practice of frequently integrating code changes into a shared repository, often multiple times a day.
+Each integration is automatically tested to detect issues early.
+The goal of CI is to reduce integration problems, allow for quicker bug detection, and ensure that the codebase remains in a deployable state.
+Continuous Delivery (CD):
+
+CD takes CI a step further by automatically deploying every code change to a staging or testing environment after it passes the integration tests.
+With CD, the software is always ready to be released to production, though actual deployment is often triggered manually.
+Continuous Deployment:
+
+Continuous Deployment automates the release process even further by automatically deploying code changes that pass all tests directly to production.
+This approach is ideal for environments that need frequent updates but can also handle quick rollbacks if issues arise.
+
+
+
+Jenkins Installation:
+-------------------------
+
+Prerequisites
+
+Minimum hardware requirements:
+
+    256 MB of RAM
+
+    1 GB of drive space (although 10 GB is a recommended minimum if running Jenkins as a Docker container
+
+
+
+Recommended hardware configuration for a small team:
+
+    4 GB+ of RAM
+
+    50 GB+ of drive space
+
+
+Step #0: -----------------> Done
+Installation of Java
+java -version
+sudo apt update
+sudo apt install openjdk-11-jre
+java -version
+sudo apt install openjdk-17-jdk -y  ------------> reboot
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+echo $PATH
+
+
+
+
+
+Step#1:
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+
+Step#2: Start Jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl enable jenkins
+
+http://4.240.91.99:8080
+http://4.240.91.99:8080/
+
+Case#1 VM: AWS/Azure ------------> Get the Public IP
+public_ip:8080
+
+
+Case#2: Locally ---> Desktop
+127.0.0.1:8080
+
+==============================================
+
+Build Automation Tools
+
+Build automation tools are essential in software development as they automate tasks that would otherwise be repetitive, time-consuming, and error-prone when done manually. 
+
+Efficiency and Speed
+Consistency and Reliability
+Ci/CD
+Dependency Management
+Standardization
+
+
+Apache Maven: use for Java based project
+Gradle
+ANT
+Make
+Bazel
+
+
+Maven:
+A Java-based build automation tool that uses a project object model (POM) file to manage dependencies and automate project builds.
+
+How maven works
+------------------
+
+pom.xml ------> Core of a maven project.
+
+\_ Project info
+
+\_ Dpendencies info
+
+\_ config details
+
+\_ Plugins
+
+The pom.xml file is the core of a Maven project. It specifies project information, configuration details, and dependencies. It also defines plugins and lifecycle configurations for tasks like compilation, testing, and packaging.
+
+
+Maven automatically downloads and includes external libraries (dependencies) specified in the pom.xml. T
+
+4.240.91.99
+
+
+GitHub Repo:
+https://github.com/discover-devops/JenkinsMaven.git
+
+pom 
+maven-samples/single-module/pom.xml
+
+/etc/default/jenkins
+
+
+
+Links:
+1: https://git-scm.com/downloads
+2: https://github.com/discover-devops/Linux
+
+3: https://www.jenkins.io/doc/book/installing/windows/
+https://www.jenkins.io/
+
+Amzn Linux
+4: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#installing-and-configuring-jenkins
+
+4: SSH Passwordless
+https://phoenixnap.com/kb/setup-passwordless-ssh
+
+ERROR:
+============
+
+INFO] Compiling 1 source file to /var/lib/jenkins/workspace/MyNewCompileJob/maven-samples/single-module/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] error: Source option 6 is no longer supported. Use 7 or later.
+[ERROR] error: Target option 6 is no longer supported. Use 7 or later.
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.602 s
+[INFO] Finished at: 2024-11-12T02:17:47Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile (default-compile) on project single-module-project: Compilation failure: Compilation failure: 
+[ERROR] error: Source option 6 is no longer supported. Use 7 or later.
+[ERROR] error: Target option 6 is no longer supported. Use 7 or later.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure
+
+===============================
+
+
+
+Step #1: Enable GitHub Webhook @ Jenkins build Trigger
+
+Step#2: Go to your GitHUB Repo ----> Settings ----> Webhook
+
+payload URL:
+
+http://<Jenkins_IP>:8080/github-webhook/
+
+http:
+Eg:
+http://4.240.91.99:8080/github-webhook/
+
+4.186.59.62
+
+
+4.240.91.99
+4.186.59.62
+----------------------------------------------------------------------------------------------------------
+
+Git Stash
+Git rebase
+cherry-pick
+
+
+Git branching best prctices
+
+**maven manually** 
+
+--------------------------------------------------------------------------
+Building remotely on myslave in workspace /tmp/workspace/MyNewCompileJob
+--------------------------------------------------------------------------
+================================================================================
+
+TOmcat Installation
+-------------------------------------------
+
+
+Step #1 Download and untar and unzip the file
+cd /opt
+
+Download tomcat  DOne
+
+cd /opt
+
+wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.tar.gz
+
+ls
+apache-tomcat-9.0.97.tar.gz
+
+tar -xvzf apache-tomcat-9.0.97.tar.gz
+
+ls
+apache-tomcat-9.0.97
+
+
+
+bootstrap.jar
+catalina-tasks.xml
+catalina.bat
+catalina.sh*
+ciphers.bat
+ciphers.sh*
+commons-daemon-native.tar.gz
+commons-daemon.jar
+configtest.bat
+configtest.sh*
+daemon.sh*
+digest.bat
+digest.sh*
+makebase.bat
+makebase.sh*
+setclasspath.bat
+setclasspath.sh*
+shutdown.bat
+shutdown.sh*
+startup.bat
+startup.sh*
+tomcat-juli.jar
+tomcat-native.tar.gz
+tool-wrapper.bat
+tool-wrapper.sh*
+version.bat
+version.sh*
+
+./startup.sh  ----------> START TOMACAT
+./shutdown.sh  -----------> STOP TOMCAT
+
+In linux ---> excutable permission
+
+
+chmod 755 startup.sh
+chmod 755 shutdown.sh
+
+------------------------------------------------------
+
+Error:
+
+403 Access Denied
+
+You are not authorized to view this page.
+
+By default the Host Manager is only accessible from a browser running on the same machine as Tomcat. If you wish to modify this restriction, you'll need to edit the Host Manager's context.xml file.
+
+If you have already configured the Host Manager application to allow access and you have used your browsers back button, used a saved book-mark or similar then you may have triggered the cross-site request forgery (CSRF) protection that has been enabled for the HTML interface of the Host Manager application. You will need to reset this protection by returning to the main Host Manager page. Once you return to this page, you will be able to continue using the Host Manager application's HTML interface normally. If you continue to see this access denied message, check that you have the necessary permissions to access this application.
+
+If you have not changed any configuration files, please examine the file conf/tomcat-users.xml in your installation. That file must contain the credentials to let you use this webapp.
+
+For example, to add the admin-gui role to a user named tomcat with a password of s3cret, add the following to the config file listed above.
+
+<role rolename="admin-gui"/>
+<user username="tomcat" password="s3cret" roles="admin-gui"/>
+
+Note that for Tomcat 7 onwards, the roles required to use the host manager application were changed from the single admin role to the following two roles. You will need to assign the role(s) required for the functionality you wish to access.
+
+    admisn-gui - allows access to the HTML GUI
+    admin-cript - allows access to the text interface
+
+The HTML interface is protected against CSRF but the text interface is not. To maintain the CSRF protection:
+
+    Users with the admin-gui role should not be granted the admin-script role.
+    If the text interface is accessed through a browser (e.g. for testing since this interface is intended for tools not humans) then the browser must be closed afterwards to terminate the session.
+
+
+/opt/apache-tomcat-9.0.97/webapps/manager/META-INF/context.xml
+/opt/apache-tomcat-9.0.97/webapps/host-manager/META-INF/context.xml
+
+SOLUTION : https://stackoverflow.com/questions/36703856/access-tomcat-manager-app-from-different-host
+
+
+
+
+ROLE:
+Ref: https://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html
+
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+
+mywebapp.war/
+│
+├── WEB-INF/             # Web application metadata
+│   ├── web.xml          # Deployment descriptor (optional)
+│   ├── classes/         # Compiled Java classes
+│   └── lib/             # JAR files (dependencies)
+├── index.html           # Static resources (e.g., HTML, CSS, JS)
+└── other-static-files/  # Images, etc.
+
+
+https://github.com/discover-devops/JenkinsMaven.git
+
+**/*.war
+
+* ----> 
+
+
+-----------------------------------------------------------------------------------------------
+
+Git Stash
+Git rebase
+cherry-pick
+
+Git branching best prctices
+------------------
+
+STASH --------------> Secret Place
+
+Git stash is a powerful Git feature that temporarily saves your changes in a stack, allowing you to work on a clean slate without committing those changes to the branch. 
+
+You can apply these saved changes later, making it especially useful when you need to switch branches without losing progress.
+
+
+
+Tomcat $ git stash
+Saved working directory and index state WIP on master: 4bfc093 Initial commit of file1.txt
+Tomcat $
+------------------------------
+
+Git Rebase
+--------------------
+
+Git rebase is a command that integrates changes from one branch into another. 
+It works by moving or "re-basing" a sequence of commits to a new base commit. 
+Rebase helps maintain a linear commit history, making it easier to understand and review.
+
+=================================
+
+Conatiner
+A container is a standard unit of software that packages up code and all its dependencies
+
+
+
+
+Types of COntainer?
+-------------------------
+
+Docker ----> Docker Inc
+
+Podman
+rkt
+CRI-O
+Conatinerd
+LXC : Linux COnatiner
+
+
+
+https://docs.docker.com/engine/install/
+https://labs.play-with-docker.com/
+
+
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+docker + verb
+docker ps
+
+
+
+Docker $ docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+2d429b9e73a6: Pull complete
+9b1039c85176: Pull complete
+9ad567d3b8a2: Pull complete
+773c63cd62e4: Pull complete
+1d2712910bdf: Pull complete
+4b0adc47c460: Pull complete
+171eebbdf235: Pull complete
+Digest: sha256:bc5eac5eafc581aeda3008b4b1f07ebba230de2f27d47767129a6a905c84f470
+Status: Downloaded newer image for nginx:latest
+26f0a13e2f04bd6d7201f3b3a955021b1d3a3e36e6f89598f491ff928265bd71
+Docker $
+
+
+Docker $ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+26f0a13e2f04   nginx     "/docker-entrypoint.…"   14 seconds ago   Up 13 seconds   80/tcp    dazzling_northcutt
+Docker $
+
+
+root@ip-172-31-35-124:~# ps -aux | grep -i nginx
+root        2566  0.0  0.1  11424  7680 ?        Ss   02:53   0:00 nginx: master process nginx -g daemon off;
+message+    2614  0.0  0.0  11888  3052 ?        S    02:53   0:00 nginx: worker process
+message+    2615  0.0  0.0  11888  3052 ?        S    02:53   0:00 nginx: worker process
+root        2725  0.0  0.0   6944  2176 pts/3    S+   02:57   0:00 grep --color=auto -i nginx
+root@ip-172-31-35-124:~#
+root@ip-172-31-35-124:~#
+root@ip-172-31-35-124:~#
+
+root@ip-172-31-35-124:~# kill -9 2566
+root@ip-172-31-35-124:~#
+root@ip-172-31-35-124:~# ps -aux | grep -i nginx
+root        2763  0.0  0.0   6944  2176 pts/3    S+   02:58   0:00 grep --color=auto -i nginx
+root@ip-172-31-35-124:~#
+
+
+
+root@ip-172-31-35-124:~# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+root@ip-172-31-35-124:~#
+
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+ps -ef
+ps -aux
+clear
+docker
+clear
+docker ps
+ps -ef |grep docker
+docker ps
+docker run -d nginx
+docker ps
+docker images
+docker ps
+docker run -d nginx
+docker ps
+clear
+docker image
+docker images
+docker ps
+docker
+clear
+docker ps
+docker stop 84dfaf723a78
+docker ps
+docker stop keen_greider
+docker ps
+docker ps -a
+docker rm 84dfaf723a78 364b9a6602c8
+docker ps -a
+docker images
+docker rmi nginx
+clear
+docker images
+
+
+docker system prune --all  ---> DON"T run in prod
+
+Node App Repo
+-------------
+
+https://github.com/discover-devops/my-node-app.git
+
+
+vi Dockerfile
+
+FROM node:13-alpine
+WORKDIR /usr/app
+COPY package*.json /usr/app/
+COPY app/* /usr/app/
+RUN npm install
+CMD ["node", "server.js"]
+
+
+
+Docker$ docker build -t my_node_app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  3.485MB
+Step 1/6 : FROM node:13-alpine
+13-alpine: Pulling from library/node
+cbdbe7a5bc2a: Pull complete
+780514bed1ad: Pull complete
+5d74fb112a7d: Pull complete
+4b9536424fa1: Pull complete
+Digest: sha256:527c70f74817f6f6b5853588c28de33459178ab72421f1fb7b63a281ab670258
+Status: Downloaded newer image for node:13-alpine
+ ---> 8216bf4583a5
+Step 2/6 : WORKDIR /usr/app
+ ---> Running in 4bb5fc6c1270
+ ---> Removed intermediate container 4bb5fc6c1270
+ ---> 508ec268465e
+Step 3/6 : COPY package*.json /usr/app/
+ ---> c65daa6a4f7d
+Step 4/6 : COPY app/* /usr/app/
+ ---> 80d700a184a8
+Step 5/6 : RUN npm install
+ ---> Running in ecc78b391ee9
+npmadded 58 packages from 51 contributors and audited 58 packages in 1.919s
+ WARN nodejs-app@1.0.0 No description
+npm WARN nodejs-app@1.0.0 No repository field.
+
+found 10 vulnerabilities (5 low, 1 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+ ---> Removed intermediate container ecc78b391ee9
+ ---> 80a328558f56
+Step 6/6 : CMD ["node", "server.js"]
+ ---> Running in e3d8a1ea47e4
+ ---> Removed intermediate container e3d8a1ea47e4
+ ---> 14fcc1e2ccc8
+Successfully built 14fcc1e2ccc8
+Successfully tagged my_node_app:latest
+Docker$
+
+-----------------------------------------------------------------
+
+Dockerizing a Python App
+-----------------------------
+
+
+vi app.py
+
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, this is a simple web application!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
+
+
+
+vi requirements.txt
+
+Flask==2.0.1
+Werkzeug==2.0.1
+
+
+vi Dockerfile
+
+FROM python:3.8-slim
+
+WORKDIR /app
+
+COPY . /app/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+
+
+
+
+----------------------
+copy <source> <destination>
+
+COPY  . /app
+
+RUN
+
+Dockerfile:
+https://docs.docker.com/reference/dockerfile/
+
+
+Docker $ docker images
+REPOSITORY    TAG         IMAGE ID       CREATED        SIZE
+my_node_app   latest      14fcc1e2ccc8   23 hours ago   117MB
+node          13-alpine   8216bf4583a5   4 years ago    114MB
+Docker $
+
+Docker $ docker build -t simple-web-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Step 1/6 : FROM python:3.8-slim
+3.8-slim: Pulling from library/python
+302e3ee49805: Pull complete
+030d7bdc20a6: Pull complete
+a3f1dfe736c5: Pull complete
+3971691a3637: Pull complete
+Digest: sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+Status: Downloaded newer image for python:3.8-slim
+ ---> b5f62925bd0f
+Step 2/6 : WORKDIR /app
+ ---> Running in 94f6e40af71c
+ ---> Removed intermediate container 94f6e40af71c
+ ---> dddb045a70a7
+Step 3/6 : COPY . /app
+ ---> 1457cfa4c49d
+Step 4/6 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in f7865933756c
+Collecting Flask==2.0.1
+  Downloading Flask-2.0.1-py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.8/94.8 kB 4.2 MB/s eta 0:00:00
+Collecting Werkzeug==2.0.1
+  Downloading Werkzeug-2.0.1-py3-none-any.whl (288 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 kB 28.0 MB/s eta 0:00:00
+Collecting click>=7.1.2
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 138.5 MB/s eta 0:00:00
+Collecting itsdangerous>=2.0
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting Jinja2>=3.0
+  Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 126.5 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26 kB)
+Installing collected packages: Werkzeug, MarkupSafe, itsdangerous, click, Jinja2, Flask
+Successfully installed Flask-2.0.1 Jinja2-3.1.4 MarkupSafe-2.1.5 Werkzeug-2.0.1 click-8.1.7 itsdangerous-2.2.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+ ---> Removed intermediate container f7865933756c
+ ---> dd284cb10a98
+Step 5/6 : EXPOSE 5000
+ ---> Running in 0e16b47f185e
+ ---> Removed intermediate container 0e16b47f185e
+ ---> 07a0361da24c
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 0e7b075c7f1e
+ ---> Removed intermediate container 0e7b075c7f1e
+ ---> 247f1313f4ee
+Successfully built 247f1313f4ee
+Successfully tagged simple-web-app:latest
+Docker $
+
+
+docer run + image
+
+docker run -p 5000:5000 simple-web-app 
+
+docker run -p 3000:3000 my_node_app 
+
+=====================================================================
+
+root@ip-172-31-33-108:~# ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:3d:3b:a2:e7:b7 brd ff:ff:ff:ff:ff:ff
+    inet 172.31.33.108/20 metric 100 brd 172.31.47.255 scope global dynamic ens5
+       valid_lft 3367sec preferred_lft 3367sec
+    inet6 fe80::83d:3bff:fea2:e7b7/64 scope link
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:e7:2a:e0:aa brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:e7ff:fe2a:e0aa/64 scope link
+       valid_lft forever preferred_lft forever
+7: veth9098766@if6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
+    link/ether 8a:14:c0:87:da:a7 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::8814:c0ff:fe87:daa7/64 scope link
+       valid_lft forever preferred_lft forever
+9: vetha0822e3@if8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
+    link/ether 4e:65:46:b5:01:22 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::4c65:46ff:feb5:122/64 scope link
+       valid_lft forever preferred_lft forever
+root@ip-172-31-33-108:~#
+
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:3d:3b:a2:e7:b7 brd ff:ff:ff:ff:ff:ff
+    inet 172.31.33.108/20 metric 100 brd 172.31.47.255 scope global dynamic ens5
+       valid_lft 3281sec preferred_lft 3281sec
+    inet6 fe80::83d:3bff:fea2:e7b7/64 scope link
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:e7:2a:e0:aa brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:e7ff:fe2a:e0aa/64 scope link
+       valid_lft forever preferred_lft forever
+
+
+Docker Networking
+: How m/w packets travells
+
+
+
+cat Dockerfile
+vi Dockerfile
+clear
+docker system prune --all
+clear
+docker images
+docker ps
+pwd
+ls
+docker build -t my_node_app .
+docker images
+clear
+docker ps
+docker images
+docker run my_node_app
+docker ps
+docker stop a2f3f32bfe9c ef352d8807e9
+ip addr show
+clear
+docker network ls
+docker network create --driver bridge my-net
+docker network ls
+docker network inspect my-net
+ip addr show
+clear
+docker run -dit --name con100 --network my-net alpine ash
+docker ps
+docker run -dit --name con200 --network my-net alpine ash
+docker ps
+
+
+docker network create --driver bridge my-net
+
+============================================================
+
+
+Volumes are independent storage managed by Docker, designed to persist data beyond the lifecycle of a container.
+
+
+"Mounts": [
+            {
+                "Type": "volume",
+                "Name": "nginx_logs",
+                "Source": "/var/lib/docker/volumes/nginx_logs/_data",
+                "Destination": "/var/log/nginx",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+
+
+
+-it
+
+i ----> interactive
+t ---. terminal
+
+
+
+/var/lib/docker/volumes/nginx_logs/_data   ------------> /var/log/nginx
+Docker $ ls
+access.log  error.log
+Docker $
+
+
+4.240.91.99
+4.186.59.62
+
+https://www.geeksforgeeks.org/docker-compose-yaml-explained-a-deep-dive-into-configuration/
+https://docs.docker.com/engine/install/ubuntu/
+
+Docker COmpose:
+===================
+
+Docker Compose is a tool for defining and running multi-container applications using a YAML configuration file. It simplifies managing multiple services, networks, and volumes for your application.
+
+For applications requiring multiple services, such as a web server, database, and caching system, Docker Compose provides a single file to orchestrate their configuration and deployment.
+
+
+project/
+├── app/
+│   ├── app.py
+│   ├── requirements.txt
+        Dockerfile
+└── docker-compose.yml
+
+
+2 directories, 4 files
+
+
+
+mkdir -p project/app && touch project/app/{app.py,requirements.txt} project/docker-compose.yml
+
+
+version: "3.3"
+
+services:
+  web:
+    build:
+      context: ./app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+
+
+Docker $ docker-compose up -d
+Creating network "project_default" with the default driver
+Creating volume "project_db_data" with default driver
+Pulling db (postgres:13)...
+13: Pulling from library/postgres
+2d429b9e73a6: Pull complete
+7853a8591a0b: Pull complete
+83f023cac7f1: Pull complete
+9eb91babd5c2: Pull complete
+cea5dd0b7231: Pull complete
+55e7ac6810e2: Pull complete
+f54bf7b92ec4: Pull complete
+3ff1e131a4ff: Pull complete
+4acb91db8cc7: Pull complete
+cd0e20344b72: Pull complete
+933461227a69: Pull complete
+f594cb55d657: Pull complete
+47eb9f649d4c: Pull complete
+f68f3c359358: Pull complete
+Digest: sha256:80ff9e2086e68aef09839045df1f07016b869d94cbd12c6462a4b300878cfdac
+Status: Downloaded newer image for postgres:13
+Building web
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Step 1/6 : FROM python:3.9-slim
+3.9-slim: Pulling from library/python
+2d429b9e73a6: Already exists
+4920a3bd5f7e: Pull complete
+77edb37367fa: Pull complete
+02c34c079cc8: Pull complete
+Digest: sha256:6250eb7983c08b3cf5a7db9309f8630d3ca03dd152158fa37a3f8daaf397085d
+Status: Downloaded newer image for python:3.9-slim
+ ---> 6a22698eab0e
+Step 2/6 : WORKDIR /app
+ ---> Running in 864bb88ae01a
+ ---> Removed intermediate container 864bb88ae01a
+ ---> 0d68ae97e795
+Step 3/6 : COPY requirements.txt .
+ ---> 412754d2f098
+Step 4/6 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in 8e225023791e
+Collecting flask
+  Downloading flask-3.1.0-py3-none-any.whl (102 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.0/103.0 kB 1.2 MB/s eta 0:00:00
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.9.10-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 13.1 MB/s eta 0:00:00
+Collecting itsdangerous>=2.2
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting Jinja2>=3.1.2
+  Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 191.0 MB/s eta 0:00:00
+Collecting blinker>=1.9
+  Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 200.6 MB/s eta 0:00:00
+Collecting importlib-metadata>=3.6
+  Downloading importlib_metadata-8.5.0-py3-none-any.whl (26 kB)
+Collecting Werkzeug>=3.1
+  Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 241.7 MB/s eta 0:00:00
+Collecting zipp>=3.20
+  Downloading zipp-3.21.0-py3-none-any.whl (9.6 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Installing collected packages: zipp, psycopg2-binary, MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, importlib-metadata, flask
+Successfully installed Jinja2-3.1.4 MarkupSafe-3.0.2 Werkzeug-3.1.3 blinker-1.9.0 click-8.1.7 flask-3.1.0 importlib-metadata-8.5.0 itsdangerous-2.2.0 psycopg2-binary-2.9.10 zipp-3.21.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+ ---> Removed intermediate container 8e225023791e
+ ---> 416a58e37713
+Step 5/6 : COPY . .
+ ---> c87a92ec60c5
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in a4d000fe4018
+ ---> Removed intermediate container a4d000fe4018
+ ---> 103e60df665f
+Successfully built 103e60df665f
+Successfully tagged project_web:latest
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating project_db_1 ... done
+Creating project_web_1 ... done
+Docker $
+
+
+
+
+services:
+  web:
+    image: python:3.9-slim
+    container_name: web
+    working_dir: /app
+    volumes:
+      - ./web:/app
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=mydb
+    depends_on:
+      - db  # Ensure db starts before web
+    command: python app.py
+
+
+================================================================================
+
+/app1 ----X
+/app2 ----Y
+
+compose.yaml
+
+----------------------------------------------------------------------------
+
+Docker Swarm
+-----------------
+Docker Swarm is Docker’s native container orchestration tool.
+ \_ Manage a cluster of Docker nodes as a single virtual system.
+ \_ Deploy, scale, and manage containerized applications across multiple nodes.
+
+
+HA
+Sacling
+Load Balancing
+
+
+MASTER:
+
+docker swarm init --advertise-addr 10.5.0.8
+
+SWARM MASTER $ docker swarm init --advertise-addr 10.5.0.8
+Swarm initialized: current node (2a8vncfqocvpxsdjesa418y2h) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3usqg9nsu1xzfvg937wd0yc44y7ig7jomhnbh18jo4igpg3lxc-9mjweerccth31f0h8o9ovjbzf 10.5.0.8:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+SWARM MASTER $
+
+Slave $ docker swarm join --token SWMTKN-1-3usqg9nsu1xzfvg937wd0yc44y7ig7jomhnbh18jo4igpg3lxc-9mjweerccth31f0h8o9ovjbzf 10.5.0.8:2377
+This node joined a swarm as a worker.
+Slave $
+
+
+docker service create --name nginx --replicas 3 -p 80:80 nginx
+===============================================================
+
+
+
+Kubernetes
+---------------
+
+Container Orchestration
+-----------------------
+
+system for automating the lifecycle of containers
+deployment, scaling, networking and management.
+
+K8S: K UBERNETE S
+
+What is Kubernetes?
+
+Kubernetes is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. 
+
+Developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF), Kubernetes simplifies the operational complexity of managing large-scale containerized workloads.
+
+why Kubernetes?
+
+\_ Manual Container Management
+\_ Resource Inefficiency
+\_ Service Discovery and Load Balancing
+\_ Scaling
+\_ Portability Across Environments  -----> EXAMPLE
+
+--------------------------------
+
+
+
+What is a Pod?
+
+A Pod is the smallest deployable unit in Kubernetes, representing a single instance of a running process in the cluster.It can host one or more containers, sharing the same network namespace and storage.
+
+Single Container Pod
+Multi-Container Pod
+
+eksctl ---
+2016
+
+ECS : Elatic Conatiner Service  ---> Docker  SWARM
+2014 ---- 2015
+EKS
+
+eksctl----> Launch 
+
+------------------------------------------------------------------
+
+vi pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
+
+EKS $ kubectl get pod
+No resources found in default namespace.
+EKS $
+
+https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+
+
+vi rs.yaml
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+  labels:
+    app: nginx
+spec:
+  replicas: 3  # Number of replicas
+  selector:
+    matchLabels:
+      app: nginx  # Matches the labels defined in the Pod template
+  template:
+    metadata:
+      labels:
+        app: nginx  # Label applied to the Pods
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest  # NGINX container image
+        ports:
+        - containerPort: 80  # Expose port 80
+
+
+
+
+
+
+
+
+
+
+
+
+
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
+
+Basic Commands (Beginner):
+  create        Create a resource from a file or from stdin.
+  expose        Take a replication controller, service, deployment or pod and expose it as a new Kubernetes Service
+  run           Run a particular image on the cluster
+  set           Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain       Documentation of resources
+  get           Display one or many resources
+  edit          Edit a resource on the server
+  delete        Delete resources by filenames, stdin, resources and names, or by resources and label selector
+
+Deploy Commands:
+  rollout       Manage the rollout of a resource
+  scale         Set a new size for a Deployment, ReplicaSet or Replication Controller
+  autoscale     Auto-scale a Deployment, ReplicaSet, or ReplicationController
+
+Cluster Management Commands:
+  certificate   Modify certificate resources.
+  cluster-info  Display cluster info
+  top           Display Resource (CPU/Memory/Storage) usage.
+  cordon        Mark node as unschedulable
+  uncordon      Mark node as schedulable
+  drain         Drain node in preparation for maintenance
+  taint         Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe      Show details of a specific resource or group of resources
+  logs          Print the logs for a container in a pod
+  attach        Attach to a running container
+  exec          Execute a command in a container
+  port-forward  Forward one or more local ports to a pod
+  proxy         Run a proxy to the Kubernetes API server
+  cp            Copy files and directories to and from containers.
+  auth          Inspect authorization
+
+Advanced Commands:
+  diff          Diff live version against would-be applied version
+  apply         Apply a configuration to a resource by filename or stdin
+  patch         Update field(s) of a resource using strategic merge patch
+  replace       Replace a resource by filename or stdin
+  wait          Experimental: Wait for a specific condition on one or many resources.
+  convert       Convert config files between different API versions
+  kustomize     Build a kustomization target from a directory or a remote url.
+
+Settings Commands:
+  label         Update the labels on a resource
+  annotate      Update the annotations on a resource
+  completion    Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  alpha         Commands for features in alpha
+  api-resources Print the supported API resources on the server
+  api-versions  Print the supported API versions on the server, in the form of "group/version"
+  config        Modify kubeconfig files
+  plugin        Provides utilities for interacting with plugins.
+  version       Print the client and server version information
