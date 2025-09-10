@@ -24,7 +24,7 @@ Seven Important components of Kubernetes
 * Controller Manager
 * Kube Api Server
 * Scheduler
-* etcd
+* etcd(etcd is a database "key:value")
 
 2) Worker Node
 * Kubelet 
