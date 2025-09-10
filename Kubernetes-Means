@@ -21,9 +21,9 @@ why Kubernetes?
 
 Seven Important components of Kubernetes
 1) Control Node
-* Controller Manager
-* Kube Api Server
-* Scheduler
+* Controller Manager()
+* Kube Api Server(API Gateway)
+* Scheduler(Where to launch a container/pod)
 * etcd(etcd is a database "key:value")
 
 2) Worker Node
@@ -45,4 +45,4 @@ Controller Manger
 DS
 CS        DS==CS      CS≠
 
-
+etcd: Database that container information and updates of all the k8s objects
