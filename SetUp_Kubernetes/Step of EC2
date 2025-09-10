@@ -1,0 +1,23 @@
+Step 1:
+   In EC2 click on launch instance
+
+Step 2:
+   Enter the name of a your instance in Name and tags field
+
+Step 3:
+   Chose your AMI and your AMI version of OS
+
+Step 4:
+   select the instance type Instance type eg: t3.medium
+
+Step 5:
+   create a keypair for your instance(ppk file only support putty its for only linux based os and pem file will support puttygen & it will support all type of os)
+
+Step 6:
+   In Network Settings create a security group for your ec2 instance
+
+Step 7:
+    In configure Storage upto 30GB is free 
+
+Step 8:
+    And leave it rest of a default hit launch instance button 
