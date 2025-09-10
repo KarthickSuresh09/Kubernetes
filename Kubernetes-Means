@@ -46,3 +46,7 @@ DS
 CS        DS==CS      CS≠
 
 etcd: Database that container information and updates of all the k8s objects
+
+* pod is atom of kubernates
+* we don't deploy container in kubernetes
+* In pod you can run one or more containers inside the pod
