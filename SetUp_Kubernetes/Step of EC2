@@ -21,3 +21,14 @@ Step 7:
 
 Step 8:
     And leave it rest of a default hit launch instance button 
+
+Step 9:
+      update the machine sudo apt update
+
+Step 10:
+      install aws cli "snap install aws-cli --classic"
+
+Step 11:
+       edit IAM role of ec2 machine click on => Security => Modifiy IAM Role => select your iam => update the role
+
+Step 12:
