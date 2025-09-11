@@ -1,0 +1,5 @@
+It will list all kubernetes pods
+kubectl get pod 
+
+it will delete the pod
+kubectl delete pod "pod name"
