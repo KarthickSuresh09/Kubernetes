@@ -4,5 +4,7 @@ Install and setup eksctl on Management Host
    c. Test that your eksclt installation was successful   
    ```sh
    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-   sudo mv /tmp/eksctl /usr/local/bin
-   eksctl version
+sudo mv /home/ubuntu/eksctl /usr/local/bin
+sudo chmod +x /usr/local/bin/eksctl
+eksctl version
+
