@@ -3,3 +3,8 @@ kubectl get pod
 
 it will delete the pod
 kubectl delete pod "pod name"
+
+
+It will list all the NODE
+kubectl get node
+
