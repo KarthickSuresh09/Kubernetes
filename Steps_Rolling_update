@@ -43,3 +43,19 @@ THIS MORE Dangerous step
 You will navigate the replicaset ==> kubectl edit deployments.apps nginx-deployment
 Now you can press i button to insert now you can change replica 
 
+
+
+Step 5:
+   Updateing the image version in various step
+  (without risky way)  
+    * Step1: vi nginx-deployment.yml
+    * Step2: now you can edit the image 
+    * Step3: kubectl apply -f nginx-deployment.yml
+
+   (It is very risky way and it is comming from direct etcd)
+    * Step1: kubectl edit deployments.apps "deployment name"
+    * step2: now you can update the image version
+    * step3: after saving the deployment file automatically image version will be changed
+
+   (This is the safest way)
+      
