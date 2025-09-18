@@ -32,6 +32,11 @@ kubectl scale deployment nginx-deployment --replicas=6
 This is command is very risky
 kubectl edit deployments.apps "deployment name"
 
+
+kubectl set image deployment/nginx-deployment nginx=nginx:1.23.3
+                       OR
+kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.23.3
+
 kubectl get pod --watch
 
 kubectl describe deployments.apps nginx-deployment |grep -i image
