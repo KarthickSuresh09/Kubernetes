@@ -1,0 +1,40 @@
+Step 1:
+    creating deployment.yml file with nginx latest image
+
+apiVersion: apps/v1       # API version used for Deployments
+kind: Deployment         # Resource type is Deployment
+metadata:
+  name: nginx-deployment  # Name of the deployment
+spec:
+  replicas: 2            # Number of Pod replicas (2 Pods will run)
+  selector:
+    matchLabels:
+      app: nginx         # Deployment will manage Pods with this label
+  template:              # Pod template (what each replica will look like)
+    metadata:
+      labels:
+        app: nginx       # Pods will have this label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest   # Container image to use
+          ports:
+            - containerPort: 80  # Expose port 80 inside the container
+
+
+Step 2:
+    Now deployment the kubectl apply -f "file name"
+
+Step 3:
+     Now verify image version nginx with help kubctl describe deployments.apps "deployment name"
+ Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:latest
+    Port:         80/TCP
+    Host Port:    0/TCP
+
+
+Step 4:
+     Scale up the pods with this command "kubectl scale deployment nginx-deployment --replicas=6" 
+
