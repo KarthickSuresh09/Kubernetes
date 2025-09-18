@@ -33,3 +33,5 @@ This is command is very risky
 kubectl edit deployments.apps "deployment name"
 
 kubectl get pod --watch
+
+kubectl describe deployments.apps nginx-deployment |grep -i image
