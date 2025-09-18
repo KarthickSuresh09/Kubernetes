@@ -16,3 +16,4 @@ kubectl get deployments.apps
 
 kubectl apply -f "file name"
 
+aws eks update-kubeconfig --name my-lab-cluster --region ap-south-1
