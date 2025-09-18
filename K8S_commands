@@ -25,3 +25,6 @@ kubectl describe deployments.apps nginx-deployment
 kubectl describe rs nginx-deployment-96b9d695
 
 kubectl describe pod nginx-deployment-96b9d695-7jjqw
+
+
+kubectl scale deployment nginx-deployment --replicas=6
