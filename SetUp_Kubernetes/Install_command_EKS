@@ -1,3 +1,5 @@
+For Amazon Linux
+
 Install and setup eksctl on Management Host   
    a. Download and extract the latest release   
    b. Move the extracted binary to /usr/local/bin   
@@ -8,3 +10,9 @@ sudo mv /home/ubuntu/eksctl /usr/local/bin
 sudo chmod +x /usr/local/bin/eksctl
 eksctl version
 
+For Ubuntu Linux
+curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz"
+tar -xzf eksctl_$(uname -s)_amd64.tar.gz
+ls -l eksctl
+sudo mv eksctl /usr/local/bin/
+eksctl version
