@@ -47,3 +47,6 @@ kubectl rollout undo deployment/nginx-deployment
 kubectl get pod --watch
 
 kubectl describe deployments.apps nginx-deployment |grep -i image
+
+
+kubectl get pod -o wide
