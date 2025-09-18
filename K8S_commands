@@ -4,6 +4,7 @@ kubectl get pod
 it will delete the pod
 kubectl delete pod "pod name"
 
+kubectl create -f "file name"
 
 It will list all the NODE
 kubectl get node
