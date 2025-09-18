@@ -31,3 +31,5 @@ kubectl scale deployment nginx-deployment --replicas=6
 
 This is command is very risky
 kubectl edit deployments.apps "deployment name"
+
+kubectl get pod --watch
