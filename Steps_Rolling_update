@@ -38,3 +38,8 @@ Step 3:
 Step 4:
      Scale up the pods with this command "kubectl scale deployment nginx-deployment --replicas=6" 
 
+                                OR
+THIS MORE Dangerous step
+You will navigate the replicaset ==> kubectl edit deployments.apps nginx-deployment
+Now you can press i button to insert now you can change replica 
+
