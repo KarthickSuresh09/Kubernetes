@@ -1,0 +1,19 @@
+apiVersion: apps/v1       # API version used for Deployments
+kind: Deployment         # Resource type is Deployment
+metadata:
+  name: nginx-deployment  # Name of the deployment
+spec:
+  replicas: 2            # Number of Pod replicas (2 Pods will run)
+  selector:
+    matchLabels:
+      app: nginx         # Deployment will manage Pods with this label
+  template:              # Pod template (what each replica will look like)
+    metadata:
+      labels:
+        app: nginx       # Pods will have this label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest   # Container image to use
+          ports:
+            - containerPort: 80  # Expose port 80 inside the container
