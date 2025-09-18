@@ -8,3 +8,11 @@ kubectl delete pod "pod name"
 It will list all the NODE
 kubectl get node
 
+
+kubectl get rs
+
+kubectl get deployments.apps
+
+
+kubectl apply -f "file name"
+
