@@ -38,6 +38,9 @@ kubectl set image deployment/nginx-deployment nginx=nginx:1.23.3
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.23.3
 
 
+kubectl describe pod <pod-name>
+
+kubectl logs <pod-name>
 
 
 kubectl rollout status deployment/nginx-deployment
@@ -48,5 +51,5 @@ kubectl get pod --watch
 
 kubectl describe deployments.apps nginx-deployment |grep -i image
 
-
+Check current Pods per node
 kubectl get pod -o wide
