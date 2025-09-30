@@ -56,3 +56,6 @@ kubectl get pod -o wide
 
 it will show the cluster info
 kubectl cluster-info
+
+
+kubectl config get-contexts
