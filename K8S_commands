@@ -53,3 +53,6 @@ kubectl describe deployments.apps nginx-deployment |grep -i image
 
 Check current Pods per node
 kubectl get pod -o wide
+
+it will show the cluster info
+kubectl cluster-info
