@@ -57,5 +57,5 @@ kubectl get pod -o wide
 it will show the cluster info
 kubectl cluster-info
 
-
+is used to list all the contexts that are defined in your kubeconfig file (usually located at ~/.kube/config).
 kubectl config get-contexts
