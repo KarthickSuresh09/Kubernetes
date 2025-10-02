@@ -14,6 +14,8 @@ kubectl get rs
 
 kubectl get deployments.apps
 
+kubectl describe deployment.apps
+
 
 kubectl apply -f "file name"
 
