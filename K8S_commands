@@ -38,6 +38,8 @@ kubectl edit deployments.apps "deployment name"
                       OR
 kubectl edit deployments.apps
 
+* kubectl edit replicasets.apps
+
 kubectl set image deployment/nginx-deployment nginx=nginx:1.23.3
                        OR
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.23.3
