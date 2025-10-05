@@ -40,6 +40,10 @@ kubectl edit deployments.apps
 
 * kubectl edit replicasets.apps
 
+To verfiy the image in deployment
+kubectl describe deployments.apps nginx-deployment |grep -i image
+
+
 kubectl set image deployment/nginx-deployment nginx=nginx:1.23.3
                        OR
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.23.3
