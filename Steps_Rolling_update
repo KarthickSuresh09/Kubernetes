@@ -5,6 +5,7 @@ RollingUpdateStrategy:  25% max unavailable, 25% max surge
 
 rolling startegy will create 25% pod first and it will deleted old 25% pod
 
+Strategy 1:
 Step 1:
     creating deployment.yml file with nginx latest image
 
@@ -42,6 +43,7 @@ Step 3:
     Host Port:    0/TCP
 
 
+Strategy 2:
 Step 4:
      Scale up the pods with this command "kubectl scale deployment nginx-deployment --replicas=6" 
 
