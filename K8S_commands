@@ -53,7 +53,7 @@ kubectl logs <pod-name>
 kubectl rollout status deployment/nginx-deployment
 kubectl rollout undo deployment/nginx-deployment
 
-
+It is live command 
 kubectl get pod --watch
 
 kubectl describe deployments.apps nginx-deployment |grep -i image
