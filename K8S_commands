@@ -33,8 +33,8 @@ kubectl describe pod nginx-deployment-96b9d695-7jjqw
 it will do horizantal scale up and down on pod
 kubectl scale deployment nginx-deployment --replicas=6
 
-This is command is very risky it is working form etcd
-kubectl edit deployments.apps "deployment name"
+This is command is very risky it is working form etcd now you can what ever in kubernates db
+kubectl edit deployments.apps
 
 
 kubectl set image deployment/nginx-deployment nginx=nginx:1.23.3
