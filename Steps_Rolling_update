@@ -1,3 +1,10 @@
+Replicas:               8 desired | 8 updated | 8 total | 8 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+
+rolling startegy will create 25% pod first and it will deleted old 25% pod
+
 Step 1:
     creating deployment.yml file with nginx latest image
 
