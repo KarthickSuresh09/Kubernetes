@@ -30,7 +30,7 @@ kubectl describe rs nginx-deployment-96b9d695
 
 kubectl describe pod nginx-deployment-96b9d695-7jjqw
 
-
+it will do horizantal scale up and down on pod
 kubectl scale deployment nginx-deployment --replicas=6
 
 This is command is very risky
