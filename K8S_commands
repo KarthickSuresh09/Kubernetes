@@ -78,3 +78,5 @@ kubectl get pod --show-labels
 kubectl get svc
 
 kubectl describe svc "Service"
+
+kubectl get ep
