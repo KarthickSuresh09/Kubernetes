@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-clusterip-service
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx  # Matches the label in the Deployment
+  ports:
+  - protocol: TCP
+    port: 80        # Port exposed by the service
+    targetPort: 80  # Port exposed by the Pod
+  type: ClusterIP   # Default type for internal access
