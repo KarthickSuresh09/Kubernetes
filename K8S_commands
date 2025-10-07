@@ -71,3 +71,6 @@ kubectl cluster-info
 
 is used to list all the contexts that are defined in your kubeconfig file (usually located at ~/.kube/config).
 kubectl config get-contexts
+
+
+kubectl get pod --show-labels
