@@ -88,3 +88,7 @@ kubectl api-versions
 kubectl api-resources
 
 kubectl get pv
+
+kubectl describe pv
+
+kubectl describe pv "pv name"
