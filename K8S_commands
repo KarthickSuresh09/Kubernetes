@@ -86,3 +86,5 @@ kubectl describe ep "endpoint name"
 kubectl api-versions
 
 kubectl api-resources
+
+kubectl get pv
