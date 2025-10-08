@@ -21,8 +21,9 @@ kubectl describe rs "replicaset-name"
 
 kubectl apply -f "file name"
 
-aws eks update-kubeconfig --name my-lab-cluster --region ap-south-1
+To update cluster: aws eks update-kubeconfig --name my-lab-cluster --region ap-south-1
 
+To Delete cluster: eksctl delete cluster my-lab-cluster --region ap-south-1
 
 kubectl describe deployments.apps nginx-deployment
 
