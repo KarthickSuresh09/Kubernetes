@@ -1,0 +1,4 @@
+What are Volumes?
+
+Kubernetes Volumes provide a way for Pods to persist data beyond the lifecycle of a container.
+Types of Volumes: emptyDir, hostPath, configMap, secret, etc.
