@@ -82,3 +82,5 @@ kubectl describe svc "Service"
 kubectl get ep
 
 kubectl describe ep "endpoint name"
+
+kubectl api-versions
