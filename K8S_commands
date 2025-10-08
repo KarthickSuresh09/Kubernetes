@@ -92,3 +92,5 @@ kubectl get pv
 kubectl describe pv
 
 kubectl describe pv "pv name"
+
+kubectl get pvc
