@@ -94,3 +94,5 @@ kubectl describe pv
 kubectl describe pv "pv name"
 
 kubectl get pvc
+
+kubectl exec -it "pod-name" -- sh
