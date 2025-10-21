@@ -2,4 +2,4 @@
 
 concepts 
 * Namespace
-* ConfigMap
+* ConfigMap ==> not started 29:58
