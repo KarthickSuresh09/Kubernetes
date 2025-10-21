@@ -1,0 +1,16 @@
+Step 1: create namespace yaml file
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev-namespace
+
+
+Step 2: Now you can run command 
+kubectl apply -f namespace.yml
+NAME              STATUS   AGE
+default           Active   85m
+dev-namespace     Active   35s
+kube-node-lease   Active   85m
+kube-public       Active   85m
+kube-system       Active   85m
+ 
