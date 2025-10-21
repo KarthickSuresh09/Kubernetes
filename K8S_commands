@@ -97,3 +97,5 @@ kubectl describe pv "pv name"
 kubectl get pvc
 
 kubectl exec -it "pod-name" -- sh
+
+kubectl get namespace OR kubectl get ns
