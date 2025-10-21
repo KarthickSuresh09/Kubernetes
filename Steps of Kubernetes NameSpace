@@ -39,3 +39,12 @@ spec:
           ports:
             - containerPort: 80
 
+
+Step 4: now run a yaml file to create a namespace with this command
+kubectl apply -f nginx-deployment.yml
+
+Step 5: verfiy with this command
+kubectl get pod -n dev-namespace
+NAME                   READY   STATUS    RESTARTS   AGE
+nginx-96b9d695-dntcm   1/1     Running   0          42s
+nginx-96b9d695-lvmmq   1/1     Running   0          42s
