@@ -101,9 +101,9 @@ kubectl exec -it "pod-name" -- sh
 kubectl get namespace OR kubectl get ns
 NAME              STATUS   AGE
 default           Active   11m
-kube-node-lease   Active   11m
+kube-node-lease   Active   11m(Don't touch this NameSpace this one is kubernetes interal function NameSpace)
 kube-public       Active   11m
-kube-system       Active   11m
+kube-system       Active   11m(Don't touch this NameSpace this one is kubernetes interal function NameSpace)
 
 
 kubectl get pod -n kube-system
