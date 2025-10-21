@@ -99,3 +99,8 @@ kubectl get pvc
 kubectl exec -it "pod-name" -- sh
 
 kubectl get namespace OR kubectl get ns
+NAME              STATUS   AGE
+default           Active   11m
+kube-node-lease   Active   11m
+kube-public       Active   11m
+kube-system       Active   11m
