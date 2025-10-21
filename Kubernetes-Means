@@ -69,3 +69,24 @@ Repliac Set
     ꜜ
     ꜜ
    Pod
+
+
+NameSpace in kubernetes?
+* A Namespace in Kubernetes is a virtual cluster within a physical cluster.
+* It provides a way to divide cluster resources between multiple users or teams.
+* Each Namespace acts as a logical boundary for resources and enables resource isolation and organization.
+
+✅ Explanation:
+This definition is accurate and well-stated.
+In simpler terms:
+
+A Namespace allows you to organize and isolate Kubernetes resources (like Pods, Services, Deployments, etc.).
+
+It’s useful when you have multiple teams or projects sharing the same Kubernetes cluster.
+
+Common default namespaces include:
+
+default
+kube-system
+kube-public
+kube-node-lease
