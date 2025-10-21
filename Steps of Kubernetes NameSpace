@@ -13,4 +13,29 @@ dev-namespace     Active   35s
 kube-node-lease   Active   85m
 kube-public       Active   85m
 kube-system       Active   85m
- 
+
+
+
+Step 3: create a yaml file to create custom namespace 
+
+ apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: dev-namespace    # Deploy in this namespace
+spec:
+  replicas: 2                # Number of Pods
+  selector:
+    matchLabels:
+      app: nginx             # Match Pods with this label
+  template:
+    metadata:
+      labels:
+        app: nginx           # Pod label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+
