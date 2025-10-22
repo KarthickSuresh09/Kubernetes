@@ -11,3 +11,9 @@ data:
 
 step 2: apply the configmap with this command
 kubectl apply -f "filename"
+    And verfiy 
+kubectl get configmaps
+
+NAME               DATA   AGE
+app-config         3      16s
+kube-root-ca.crt   1      49m
