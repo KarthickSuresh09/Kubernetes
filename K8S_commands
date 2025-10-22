@@ -115,3 +115,17 @@ kubectl get configmaps
 
 get detailed about configmap
 kubectl describe configmap "configmap name"
+
+* explanation command: kubectl delete deployment nginx -n dev-namespace
+==> kubectl delete → Deletes a resource
+==> deployment nginx → Specifies the Deployment name (nginx)
+==> -n dev-namespace → Tells Kubernetes to look inside the namespace dev-namespace
+
+Option 1 — Delete the entire namespace (recommended for cleanup)
+This will remove everything inside that namespace (all Deployments, Pods, Services, etc.):
+kubectl delete namespace my-namespace
+
+Option 2 — Delete only the Deployment (keep the namespace)
+If you only want to remove the Deployment but keep the namespace:
+kubectl delete deployment nginx -n my-namespace
+
