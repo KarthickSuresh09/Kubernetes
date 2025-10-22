@@ -6,4 +6,5 @@ concepts
 * Deployment
 * Namespace
 * ConfigMap
-* Secret ===> 44:31
+* Secret
+* StatefulSet & Demonstration ===> Not Started 55:31
