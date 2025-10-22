@@ -7,6 +7,8 @@ metadata:
 
 Step 2: Now you can run command 
 kubectl apply -f namespace.yml
+ AND verfiy with this command
+kubectl get ns (OR) kubectl get namespace
 NAME              STATUS   AGE
 default           Active   85m
 dev-namespace     Active   35s
