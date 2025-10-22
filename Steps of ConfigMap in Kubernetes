@@ -17,3 +17,22 @@ kubectl get configmaps
 NAME               DATA   AGE
 app-config         3      16s
 kube-root-ca.crt   1      49m
+
+kubectl describe configmap app-config(get detailed about configmap)
+Name:         app-config
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+
+Data
+====
+APP_DEBUG:
+----
+false
+APP_ENV:
+----
+production
+LOG_LEVEL:
+----
+info
+Events:  <none>
