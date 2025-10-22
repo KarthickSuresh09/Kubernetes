@@ -129,3 +129,4 @@ Option 2 — Delete only the Deployment (keep the namespace)
 If you only want to remove the Deployment but keep the namespace:
 kubectl delete deployment nginx -n my-namespace
 
+echo -n "myusername" | base64
