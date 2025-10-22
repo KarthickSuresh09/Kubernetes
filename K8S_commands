@@ -112,3 +112,6 @@ kubectl config current-context
 
 
 kubectl get configmaps
+
+get detailed about configmap
+kubectl describe configmap "configmap name"
