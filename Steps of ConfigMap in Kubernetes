@@ -38,7 +38,7 @@ info
 Events:  <none>
 
 
-Step 3: create a configmap pod yaml file
+Step 3: create a configmap pod yaml file and create the pod
 apiVersion: v1
 kind: Pod
 metadata:
@@ -59,3 +59,13 @@ spec:
           name: app-config
           key: APP_DEBUG
   restartPolicy: Never
+
+
+Step 4: Navigate the inside pod with this command and verify the env
+kubectl exec -it configmap-env-pod -- sh
+===> with the help of echo command
+echo $APP_ENV
+production
+# echo $APP_DEBUG
+false
+
