@@ -1,0 +1,13 @@
+Step 1: create a config yaml file
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_ENV: production
+  APP_DEBUG: "false"
+  LOG_LEVEL: info
+
+
+step 2: apply the configmap with this command
+kubectl apply -f "filename"
