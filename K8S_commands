@@ -109,3 +109,6 @@ kube-system       Active   11m(Don't touch this NameSpace this one is kubernetes
 kubectl get pod -n kube-system
 
 kubectl config current-context
+
+
+kubectl get configmaps
