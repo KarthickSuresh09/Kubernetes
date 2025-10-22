@@ -5,4 +5,5 @@ concepts
 * ReplicaSet
 * Deployment
 * Namespace
-* ConfigMap ==> not started 39
+* ConfigMap
+* Secret ===> 44:31
