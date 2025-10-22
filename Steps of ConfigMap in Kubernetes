@@ -36,3 +36,26 @@ LOG_LEVEL:
 ----
 info
 Events:  <none>
+
+
+Step 3: create a configmap pod yaml file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-env-pod
+spec:
+  containers:
+  - name: app
+    image: nginx
+    env:
+    - name: APP_ENV
+      valueFrom:
+        configMapKeyRef:
+          name: app-config
+          key: APP_ENV
+    - name: APP_DEBUG
+      valueFrom:
+        configMapKeyRef:
+          name: app-config
+          key: APP_DEBUG
+  restartPolicy: Never
