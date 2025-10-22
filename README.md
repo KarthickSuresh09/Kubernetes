@@ -5,4 +5,4 @@ concepts
 * ReplicaSet
 * Deployment
 * Namespace
-* ConfigMap ==> not started 29:58
+* ConfigMap ==> not started 39
