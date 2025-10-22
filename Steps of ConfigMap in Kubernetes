@@ -69,3 +69,4 @@ production
 # echo $APP_DEBUG
 false
 
+"exit" is the command of exit a pod 
