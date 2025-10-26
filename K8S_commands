@@ -105,7 +105,7 @@ kube-node-lease   Active   11m(Don't touch this NameSpace this one is kubernetes
 kube-public       Active   11m
 kube-system       Active   11m(Don't touch this NameSpace this one is kubernetes interal function NameSpace)
 
-
+* this command will list custom namespace pod
 kubectl get pod -n kube-system
 
 kubectl config current-context
