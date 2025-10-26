@@ -130,6 +130,7 @@ If you only want to remove the Deployment but keep the namespace:
 kubectl delete deployment nginx -n my-namespace
 
 
+* This commands to create username & passwords in secrets
 base64 is default in k8s
 echo -n "myusername" | base64
 bXl1c2VybmFtZQ==
