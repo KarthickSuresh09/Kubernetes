@@ -27,7 +27,7 @@ spec:
 
 
 
-                                               Deployment 
+                                               Deployment ============> Deployment is good for stateless application
                                                    |
                                                    |
                                                    |
@@ -36,7 +36,7 @@ spec:
                |                                                                      |
                |                                                                      |
     New POD ===> pod name Changes                                           there is No ODERING in launching a pod          
-               |
-               |
+               
+            
 
 
