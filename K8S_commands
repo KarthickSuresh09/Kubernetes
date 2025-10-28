@@ -147,3 +147,7 @@ kubectl get daemonset
 
 * It will delete the daemonset
 kubectl delete daemonset nginx-daemonset
+
+
+* 
+kubectl create namespace efklog
