@@ -1,4 +1,0 @@
-What is Demonset
-
-* A DaemonSet is a Kubernetes resource that ensures a specific Pod is scheduled on all (or specific) nodes in the cluster. 
-* If new nodes are added to the cluster, the DaemonSet automatically schedules the Pod on those nodes as well.
