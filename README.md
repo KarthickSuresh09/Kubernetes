@@ -7,5 +7,5 @@ concepts
 * Namespace
 * ConfigMap
 * Secret
-* Demonstration
+* DaemonSet
 * StatefulSet ===> Not Started 01:07
