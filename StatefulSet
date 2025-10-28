@@ -26,3 +26,23 @@ API servers: REST APIs that connect to an external database
 | ------------- | ----------------------- | ------------ | -------------------- | ------------------- |
 | **Stateless** | Deployment / ReplicaSet | No           | Random               | Nginx, Frontend App |
 | **Stateful**  | StatefulSet             | Yes (PV/PVC) | Fixed (pod-0, pod-1) | MySQL, MongoDB      |
+
+
+****>Stateful set always remain a pod name<********
+
+Step 1: create a database service yaml file
+vi mysql-service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  clusterIP: None
+  selector:
+    app: mysql
+  ports:
+  - name: mysql
+    port: 3306
+
+
