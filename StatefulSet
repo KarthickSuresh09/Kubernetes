@@ -1,0 +1,4 @@
+What is StatefelSet?
+
+A StatefulSet is a Kubernetes resource designed to manage stateful applications. 
+Unlike Deployments, StatefulSets maintain sticky identities for Pods, which ensures stable network identities, persistent storage, and ordered deployment/scaling.
