@@ -151,3 +151,6 @@ kubectl delete daemonset nginx-daemonset
 
 * 
 kubectl create namespace efklog
+
+* this will execute all the yaml file
+kubectl apply -f .
