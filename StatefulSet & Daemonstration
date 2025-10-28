@@ -33,3 +33,9 @@ step 2: run a daemonset yaml file and verfiy it
 kubectl get daemonset
 NAME              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
 nginx-daemonset   2         2         2       2            2           <none>          61s
+
+
+Step 3: if you have 100 node means DaemonSet will be deploy each have one pod
+kubectl get po -o wide
+nginx-daemonset-fh4zr   1/1     Running   0          3m39s   192.168.1.53     ip-192-168-12-129.ap-south-1.compute.internal   <none>           <none>
+nginx-daemonset-pxgwb   1/1     Running   0          3m39s   192.168.38.69    ip-192-168-63-32.ap-south-1.compute.internal    <none>           <none>
