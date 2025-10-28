@@ -16,6 +16,9 @@ kubectl get deployments.apps
 
 kubectl describe deployment.apps
 
+* To delete a deployment 
+kubectl delete deployment nginx
+kubectl delete deployments.apps nginx
 
 kubectl describe rs "replicaset-name"
 
