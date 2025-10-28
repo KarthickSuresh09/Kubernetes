@@ -98,4 +98,25 @@ spec:
       storageClassName: mysql-storage
 
 
+Step 4: run these yaml file mysql-service.yaml, storage-class.yml & mysql-statefulset.yaml
 
+Step 5: now you can verfiy the statefulset
+kubectl get statefulset
+NAME    READY   AGE
+mysql   0/3     3m23s
+
+Step 6: now you can verfiy pod is pending status or not
+kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+mysql-0   0/1     Pending   0          42s
+root@ip-172-31-34-75:/home/ubuntu# kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+mysql-0   0/1     Pending   0          47s
+root@ip-172-31-34-75:/home/ubuntu# kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+mysql-0   0/1     Pending   0          2m31s
+
+Step 7: Check pvc is created or not
+kubectl get pvc
+NAME                 STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-data-mysql-0   Pending                                      mysql-storage   <unset>                 5m55s
