@@ -7,4 +7,5 @@ concepts
 * Namespace
 * ConfigMap
 * Secret
-* StatefulSet & Demonstration ===> Not Started 55:31
+* Demonstration
+* StatefulSet ===> Not Started 01:07
