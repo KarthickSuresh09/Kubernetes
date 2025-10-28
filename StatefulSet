@@ -2,3 +2,27 @@ What is StatefelSet?
 
 A StatefulSet is a Kubernetes resource designed to manage stateful applications. 
 Unlike Deployments, StatefulSets maintain sticky identities for Pods, which ensures stable network identities, persistent storage, and ordered deployment/scaling.
+
+
+Difference between stateful & Stateless application
+🔹 Stateful Application
+* A stateful application is one that remembers data (state) between user sessions or restarts.
+✅ Example:
+Databases: MySQL, MongoDB, PostgreSQL
+Message Queues: Kafka, RabbitMQ
+Other apps: Any app that stores session info, user data, or transactions
+
+🔹 Stateless Application
+A stateless application does not store any data (state) locally.
+Every request is independent — the app doesn’t remember previous ones.
+✅ Example:
+Web servers: Nginx, Apache
+Frontend apps: React, Angular UI services
+API servers: REST APIs that connect to an external database
+
+
+🔸 In Kubernetes Terms:
+| Type          | Object Used             | Storage      | Pod Identity         | Example             |
+| ------------- | ----------------------- | ------------ | -------------------- | ------------------- |
+| **Stateless** | Deployment / ReplicaSet | No           | Random               | Nginx, Frontend App |
+| **Stateful**  | StatefulSet             | Yes (PV/PVC) | Fixed (pod-0, pod-1) | MySQL, MongoDB      |
