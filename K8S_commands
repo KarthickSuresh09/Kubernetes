@@ -154,3 +154,6 @@ kubectl create namespace efklog
 
 * this will execute all the yaml file
 kubectl apply -f .
+
+
+Kubernetes ConfigMap is used to store:  Non-confidential key-value data
