@@ -157,3 +157,9 @@ kubectl apply -f .
 
 
 Kubernetes ConfigMap is used to store:  Non-confidential key-value data
+
+* To Check pod log
+kubectl logs "pod name"
+
+kubectl logs <pod-name> --previous
+
