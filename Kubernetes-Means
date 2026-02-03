@@ -47,6 +47,35 @@ CS        DS==CS      CS≠
 
 etcd: Database that container information and updates of all the k8s objects
 
+
+1. kube-api server (Front door & single source of truth)
+Every command (kubectl, scheduler, controllers) talks only to this.
+Reads/writes cluster state to etcd.
+If API server is down → cluster is blind.
+👉 Rule of thumb: Nothing bypasses the API server.
+
+2. etcd (Cluster memory)
+Key-value database.
+Stores desired state: Pods, Deployments, ConfigMaps, Secrets.
+If etcd is lost → cluster amnesia 😬.
+👉 This is why etcd backups are non-negotiable in prod.
+
+3. scheduler (Placement strategist)
+Watches for Pending Pods.
+Decides which worker node a Pod should run on.
+Factors: CPU, memory, taints/tolerations, affinity.
+👉 Scheduler does not run pods—it only assigns them.
+
+4. controller manager (Autopilot)
+Runs controllers like:
+Node controller
+ReplicaSet controller
+Deployment controller
+Constantly compares:
+desired state vs actual state
+If mismatch → corrective action.
+👉 Example: Pod dies → controller creates a new one. Old-school ops, automated.
+
 * pod is atom of kubernates
 * we don't deploy container in kubernetes
 * In pod you can run one or more containers inside the pod
