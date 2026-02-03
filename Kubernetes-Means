@@ -76,6 +76,29 @@ desired state vs actual state
 If mismatch → corrective action.
 👉 Example: Pod dies → controller creates a new one. Old-school ops, automated.
 
+
+5. kubelet (Node supervisor)
+Agent running on each worker node.
+Talks to API server.
+Responsibilities:
+Pull Pod specs
+Ask container runtime to start containers
+Report health/status back
+👉 kubelet = middle manager on each node.
+
+6. Container Runtime (Actual worker)
+Examples: containerd, CRI-O.
+Pulls images.
+Starts/stops containers.
+👉 Kubernetes doesn’t run containers directly—runtime does.
+
+7. kube-proxy (Networking traffic cop)
+Manages networking rules (iptables / IPVS).
+Enables:
+Service → Pod communication
+Load balancing across Pods
+👉 Without kube-proxy, Services are just theory.
+
 * pod is atom of kubernates
 * we don't deploy container in kubernetes
 * In pod you can run one or more containers inside the pod
