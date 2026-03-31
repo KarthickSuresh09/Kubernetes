@@ -9,3 +9,13 @@ Install and setup kubectl on Management host
    chmod +x ./kubectl
    mv ./kubectl /usr/local/bin 
    kubectl version --short --client
+
+
+
+* Mac install commands
+
+curl -LO "https://dl.k8s.io/release/v1.24.17/bin/darwin/amd64/kubectl"
+
+# Install it
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
