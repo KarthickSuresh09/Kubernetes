@@ -163,3 +163,5 @@ kubectl logs "pod name"
 
 kubectl logs <pod-name> --previous
 
+To create name space 
+kubectl create namespace name
