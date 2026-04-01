@@ -169,3 +169,6 @@ kubectl create namespace name
 kubectl get pods -n production 
 
 kubectl get pods -n namespace -w
+
+kubectl delete statefulset mysql -n production
+   kubectl delete pvc mysql-storage-mysql-0 -n production
