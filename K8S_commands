@@ -172,3 +172,6 @@ kubectl get pods -n namespace -w
 
 kubectl delete statefulset mysql -n production
    kubectl delete pvc mysql-storage-mysql-0 -n production
+
+This command will check which node have configured with which node
+kubectl get pods -A -o wide
