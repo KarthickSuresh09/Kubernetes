@@ -178,3 +178,15 @@ kubectl get pods -A -o wide
 
 This command will show how many pods configured with each pod count
 kubectl get pods -A -o wide | awk '{print $8}' | sort | uniq -c
+
+It ==>
+kubectl drain ip-192-168-26-144.ap-south-1.compute.internal \ 
+--ignore-daemonsets \
+--delete-local-data \
+--force
+
+This command will delete nodes with node group
+eksctl delete nodegroup   --cluster java-k8s-cluster   --region ap-south-1   --name java-k8s-workers
+
+This command will show nodes with node group
+kubectl get nodes -L eks.amazonaws.com/nodegroup
