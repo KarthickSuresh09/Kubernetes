@@ -190,3 +190,6 @@ eksctl delete nodegroup   --cluster java-k8s-cluster   --region ap-south-1   --n
 
 This command will show nodes with node group
 kubectl get nodes -L eks.amazonaws.com/nodegroup
+
+This command will show everything taged with namespace
+kubectl get all -n production
