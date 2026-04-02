@@ -175,3 +175,6 @@ kubectl delete statefulset mysql -n production
 
 This command will check which node have configured with which node
 kubectl get pods -A -o wide
+
+This command will show how many pods configured with each pod count
+kubectl get pods -A -o wide | awk '{print $8}' | sort | uniq -c
