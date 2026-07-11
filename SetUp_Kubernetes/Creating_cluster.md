@@ -6,9 +6,12 @@ Create EKS cluster and nodes from EC2 Management Host
    --nodes-min 2 \
    --nodes-max 2 \ 
    --zones <AZ-1>,<AZ-2>
-
+```
                                   OR
 
    example:
+```
    eksctl create cluster --name my-lab-cluster --region ap-south-1 --node-type t2.medium 
     ```
+
+eksctl 
