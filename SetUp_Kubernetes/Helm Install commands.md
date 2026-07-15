@@ -1,5 +1,20 @@
 * Mac commands
-
+```
 curl -LO https://get.helm.sh/helm-v3.10.3-darwin-amd64.tar.gz
+```
+
+```
 tar -zxvf helm-v3.10.3-darwin-amd64.tar.gz
+```
+
+```
 sudo mv darwin-amd64/helm /usr/local/bin/helm
+```
+
+* Ubuntu
+```
+  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+```
+```
+helm version
+```
