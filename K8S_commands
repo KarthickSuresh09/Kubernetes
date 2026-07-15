@@ -193,3 +193,6 @@ kubectl get nodes -L eks.amazonaws.com/nodegroup
 
 This command will show everything taged with namespace
 kubectl get all -n production
+
+to check Demonset 
+kubectl get daemonset -n monitoring
