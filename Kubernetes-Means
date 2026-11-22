@@ -32,6 +32,11 @@ Seven Important components of Kubernetes
 * Container Runtime
 
 Kube API Server ======> API Gateway
+When we execute a command like kubectl get pods, the request first goes to the API Server, 
+which retrieves the required information from etcd and returns the response."
+
+Remember: API Server = Central communication gateway of Kubernetes.
+
 etcd: Databse =========> key:value
 Scheduler? ==============> Where to LAUNCH conatiner/POD
     ⬇
