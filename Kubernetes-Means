@@ -47,7 +47,6 @@ CS        DS==CS      CS≠
 
 "The Controller Manager runs continuous reconciliation loops—like the ReplicaSet, Node, and EndpointSlice controllers—that constantly 
 compare the desired state defined in etcd with the actual state of the cluster, 
-taking corrective action whenever drift happens so the cluster self-heals."
 
 etcd: Database that container information and updates of all the k8s objects
 
