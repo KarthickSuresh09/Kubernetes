@@ -85,6 +85,13 @@ If mismatch → corrective action.
 👉 Example: Pod dies → controller creates a new one. Old-school ops, automated.
 
 
+Kublet : Kubelet is the node captain—it watches the API server for Pods assigned to this machine, 
+runs health checks, and reports status. 
+
+Container : Container Runtime like containerd is the engine that pulls images and runs the isolated containers. 
+
+Kube-Proxy :  Kube-Proxy is the node's traffic router—it keeps Service routing rules updated as Pods come and go
+
 5. kubelet (Node supervisor)
 Agent running on each worker node.
 Talks to API server.
