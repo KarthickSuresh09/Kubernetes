@@ -86,7 +86,7 @@ If mismatch → corrective action.
 
 
 1. kubelet
-Kubelet communicates with the API server, monitors Pods assigned to its node, 
+Kubelet communicates with the API server to monitors Pods assigned to its node, 
 ensures containers are running as expected, and reports node and Pod status back to the API server.
 
 2. Container Runtime
